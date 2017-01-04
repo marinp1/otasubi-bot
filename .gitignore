@@ -6,3 +6,4 @@ target/
 otasubibot.iml
 bot_token
 .idea
+*~
