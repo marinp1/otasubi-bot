@@ -55,6 +55,8 @@ class OtasubiBot extends TelegramLongPollingBot  {
     val sendMessageRequest = new SendMessage();
     sendMessageRequest.enableMarkdown(true);
     sendMessageRequest.setChatId(msg.getChatId().toString());
+
+    println("Request from ID " + msg.getFrom.getId)
     
     val weekday = LocalDateTime.now.dayOfWeek().get()
     
@@ -94,6 +96,7 @@ class OtasubiBot extends TelegramLongPollingBot  {
       
     } else {
       sendMessageRequest.setText("Äläs ny")
+      println("Update request from unauthorized ID " + msg.getFrom.getId)
     }
       
     try {
