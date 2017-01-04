@@ -1,0 +1,8 @@
+.settings/
+target/
+.cache-main
+.project
+.classpath
+otasubibot.iml
+bot_token
+.idea
